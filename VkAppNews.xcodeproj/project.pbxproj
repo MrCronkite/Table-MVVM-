@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E4D8E69D16D765F39827483 /* Pods_VkAppNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA2156C0B39D3F29BBA038F /* Pods_VkAppNews.framework */; };
 		B2C7C5762897AD80006DF06B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C7C5752897AD80006DF06B /* AppDelegate.swift */; };
 		B2C7C5782897AD80006DF06B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C7C5772897AD80006DF06B /* SceneDelegate.swift */; };
 		B2C7C57A2897AD80006DF06B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C7C5792897AD80006DF06B /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58BE93B089E3EF9FEA279934 /* Pods-VkAppNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VkAppNews.release.xcconfig"; path = "Target Support Files/Pods-VkAppNews/Pods-VkAppNews.release.xcconfig"; sourceTree = "<group>"; };
+		9283F4D370A1447293625A03 /* Pods-VkAppNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VkAppNews.debug.xcconfig"; path = "Target Support Files/Pods-VkAppNews/Pods-VkAppNews.debug.xcconfig"; sourceTree = "<group>"; };
 		B2C7C5722897AD7F006DF06B /* VkAppNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VkAppNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C7C5752897AD80006DF06B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2C7C5772897AD80006DF06B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,8 @@
 		B2C7C57E2897AD81006DF06B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2C7C5812897AD81006DF06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2C7C5832897AD81006DF06B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2C7C58B28985C0C006DF06B /* VKSdkFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VKSdkFramework.framework; path = Carthage/Build/iOS/VKSdkFramework.framework; sourceTree = "<group>"; };
+		BBA2156C0B39D3F29BBA038F /* Pods_VkAppNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VkAppNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +36,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E4D8E69D16D765F39827483 /* Pods_VkAppNews.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40FF6B2E723FA520E042B961 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9283F4D370A1447293625A03 /* Pods-VkAppNews.debug.xcconfig */,
+				58BE93B089E3EF9FEA279934 /* Pods-VkAppNews.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B2C7C5692897AD7F006DF06B = {
 			isa = PBXGroup;
 			children = (
 				B2C7C5742897AD7F006DF06B /* VkAppNews */,
 				B2C7C5732897AD7F006DF06B /* Products */,
+				B2C7C58A28985C0B006DF06B /* Frameworks */,
+				40FF6B2E723FA520E042B961 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +85,15 @@
 			path = VkAppNews;
 			sourceTree = "<group>";
 		};
+		B2C7C58A28985C0B006DF06B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2C7C58B28985C0C006DF06B /* VKSdkFramework.framework */,
+				BBA2156C0B39D3F29BBA038F /* Pods_VkAppNews.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2C7C5862897AD81006DF06B /* Build configuration list for PBXNativeTarget "VkAppNews" */;
 			buildPhases = (
+				7A9F964C9486B9E5D33F315B /* [CP] Check Pods Manifest.lock */,
 				B2C7C56E2897AD7F006DF06B /* Sources */,
 				B2C7C56F2897AD7F006DF06B /* Frameworks */,
 				B2C7C5702897AD7F006DF06B /* Resources */,
+				B2C7C5892898569A006DF06B /* ShellScript */,
+				5CD8263EB62E2C35AA4AC31C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +162,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5CD8263EB62E2C35AA4AC31C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VkAppNews/Pods-VkAppNews-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VkAppNews/Pods-VkAppNews-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VkAppNews/Pods-VkAppNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A9F964C9486B9E5D33F315B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VkAppNews-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2C7C5892898569A006DF06B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B2C7C56E2897AD7F006DF06B /* Sources */ = {
@@ -284,12 +374,17 @@
 		};
 		B2C7C5872897AD81006DF06B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9283F4D370A1447293625A03 /* Pods-VkAppNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LUQ926BAHR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VkAppNews/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -312,12 +407,17 @@
 		};
 		B2C7C5882897AD81006DF06B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58BE93B089E3EF9FEA279934 /* Pods-VkAppNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LUQ926BAHR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VkAppNews/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
