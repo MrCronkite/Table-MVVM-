@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		7E4D8E69D16D765F39827483 /* Pods_VkAppNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA2156C0B39D3F29BBA038F /* Pods_VkAppNews.framework */; };
+		B25FEAD3289861F6000930DF /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25FEAD2289861F6000930DF /* AuthService.swift */; };
+		B25FEAD62898643F000930DF /* AuthViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B25FEAD52898643F000930DF /* AuthViewController.storyboard */; };
 		B2C7C5762897AD80006DF06B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C7C5752897AD80006DF06B /* AppDelegate.swift */; };
 		B2C7C5782897AD80006DF06B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C7C5772897AD80006DF06B /* SceneDelegate.swift */; };
-		B2C7C57A2897AD80006DF06B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C7C5792897AD80006DF06B /* ViewController.swift */; };
-		B2C7C57D2897AD80006DF06B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C7C57B2897AD80006DF06B /* Main.storyboard */; };
+		B2C7C57A2897AD80006DF06B /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C7C5792897AD80006DF06B /* AuthViewController.swift */; };
 		B2C7C57F2897AD81006DF06B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C7C57E2897AD81006DF06B /* Assets.xcassets */; };
 		B2C7C5822897AD81006DF06B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C7C5802897AD81006DF06B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,11 +20,12 @@
 /* Begin PBXFileReference section */
 		58BE93B089E3EF9FEA279934 /* Pods-VkAppNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VkAppNews.release.xcconfig"; path = "Target Support Files/Pods-VkAppNews/Pods-VkAppNews.release.xcconfig"; sourceTree = "<group>"; };
 		9283F4D370A1447293625A03 /* Pods-VkAppNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VkAppNews.debug.xcconfig"; path = "Target Support Files/Pods-VkAppNews/Pods-VkAppNews.debug.xcconfig"; sourceTree = "<group>"; };
+		B25FEAD2289861F6000930DF /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		B25FEAD52898643F000930DF /* AuthViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthViewController.storyboard; sourceTree = "<group>"; };
 		B2C7C5722897AD7F006DF06B /* VkAppNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VkAppNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C7C5752897AD80006DF06B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2C7C5772897AD80006DF06B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B2C7C5792897AD80006DF06B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B2C7C57C2897AD80006DF06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B2C7C5792897AD80006DF06B /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		B2C7C57E2897AD81006DF06B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2C7C5812897AD81006DF06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2C7C5832897AD81006DF06B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,8 +51,15 @@
 				9283F4D370A1447293625A03 /* Pods-VkAppNews.debug.xcconfig */,
 				58BE93B089E3EF9FEA279934 /* Pods-VkAppNews.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B25FEAD42898620F000930DF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B25FEAD2289861F6000930DF /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		B2C7C5692897AD7F006DF06B = {
@@ -76,8 +85,9 @@
 			children = (
 				B2C7C5752897AD80006DF06B /* AppDelegate.swift */,
 				B2C7C5772897AD80006DF06B /* SceneDelegate.swift */,
-				B2C7C5792897AD80006DF06B /* ViewController.swift */,
-				B2C7C57B2897AD80006DF06B /* Main.storyboard */,
+				B2C7C5792897AD80006DF06B /* AuthViewController.swift */,
+				B25FEAD52898643F000930DF /* AuthViewController.storyboard */,
+				B25FEAD42898620F000930DF /* Services */,
 				B2C7C57E2897AD81006DF06B /* Assets.xcassets */,
 				B2C7C5802897AD81006DF06B /* LaunchScreen.storyboard */,
 				B2C7C5832897AD81006DF06B /* Info.plist */,
@@ -156,8 +166,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2C7C5822897AD81006DF06B /* LaunchScreen.storyboard in Resources */,
+				B25FEAD62898643F000930DF /* AuthViewController.storyboard in Resources */,
 				B2C7C57F2897AD81006DF06B /* Assets.xcassets in Resources */,
-				B2C7C57D2897AD80006DF06B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +229,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\n";
+			shellScript = "
+";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -228,23 +239,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2C7C57A2897AD80006DF06B /* ViewController.swift in Sources */,
+				B2C7C57A2897AD80006DF06B /* AuthViewController.swift in Sources */,
 				B2C7C5762897AD80006DF06B /* AppDelegate.swift in Sources */,
 				B2C7C5782897AD80006DF06B /* SceneDelegate.swift in Sources */,
+				B25FEAD3289861F6000930DF /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B2C7C57B2897AD80006DF06B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B2C7C57C2897AD80006DF06B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B2C7C5802897AD81006DF06B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -389,7 +393,6 @@
 				INFOPLIST_FILE = VkAppNews/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -422,7 +425,6 @@
 				INFOPLIST_FILE = VkAppNews/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
