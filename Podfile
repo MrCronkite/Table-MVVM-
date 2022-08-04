@@ -8,7 +8,7 @@ target 'VkAppNews' do
   # Pods for VkAppNews
     
 
-   platform :ios, '8.0'
+   platform :ios, '15.0'
    pod "VK-ios-sdk"
 
 end
