@@ -1,6 +1,0 @@
-framework module Pods_VkAppNews {
-  umbrella header "Pods-VkAppNews-umbrella.h"
-
-  export *
-  module * { export * }
-}
